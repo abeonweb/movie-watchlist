@@ -60,19 +60,19 @@ async function getMovieInfo(imdbID){
 * @param {*} id used to identify the unique movie
 *  
 */
-function addToWatchlist(id){
+// function addToWatchlist(id){
     
-    movieArray= JSON.parse(localStorage.getItem("movieArray"))
-    let watchlistArray= JSON.parse(localStorage.getItem("watchlist"))
-    if(!watchlistArray) watchlistArray=[]
-    // let value = watchlistArray.find(movie =>movie.id===id)
-    if(watchlistArray.find(movie =>movie.id===id)){
-        return
-    } else{
-        watchlistArray.push(movieArray.find(movie =>movie.id===id))
-        localStorage.setItem("watchlist", JSON.stringify(watchlistArray))
-    }        
-}
+//     movieArray= JSON.parse(localStorage.getItem("movieArray"))
+//     let watchlistArray= JSON.parse(localStorage.getItem("watchlist"))
+//     if(!watchlistArray) watchlistArray=[]
+//     // let value = watchlistArray.find(movie =>movie.id===id)
+//     if(watchlistArray.find(movie =>movie.id===id)){
+//         return
+//     } else{
+//         watchlistArray.push(movieArray.find(movie =>movie.id===id))
+//         localStorage.setItem("watchlist", JSON.stringify(watchlistArray))
+//     }        
+// }
 
 
 
