@@ -13,7 +13,7 @@ async function movieSearch(event){
     movieArray = []
     let value = searchInput.value
     const response= await fetch(
-        `http://www.omdbapi.com/?s=${value}&apikey=8bf518a9&page=4type=movie,series,episode`,
+        `https://www.omdbapi.com/?s=${value}&apikey=8bf518a9&page=4type=movie,series,episode`,
         )
     const data = await response.json()
     if(data.Response ==="True"){
@@ -30,7 +30,7 @@ async function movieSearch(event){
         
 async function getMovieInfo(imdbID){
     const response = await fetch(
-        `http://www.omdbapi.com/?i=${imdbID}&apikey=8bf518a9&type=movie,series,episode`)
+        `https://www.omdbapi.com/?i=${imdbID}&apikey=8bf518a9&type=movie,series,episode`)
     const data = await response.json()
     
     //create a movie object to control the data 
