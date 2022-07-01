@@ -1,4 +1,4 @@
-import {render} from './utils.js'
+import {render, addToWatchlist} from './utils.js'
 const searchInput = document.querySelector(".search-input")
 const movieContainer = document.querySelector(".container-movie-list")
 const form = document.querySelector("form")
