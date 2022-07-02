@@ -139,6 +139,12 @@ form{
     font-size: 0.875rem;
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
+    background-color: #c2c1c1;
+}
+
+.search-btn:hover,
+.search-btn:focus{
+    background-color: #bababa;
 }
 
 /* ============
