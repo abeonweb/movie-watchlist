@@ -8,20 +8,19 @@
 
 /* ============
 TYPOGRAPHY 
-============*/
+============ */
 
 body{
     font-family: "Inter", sans-serif;
     color: #505a69;
 }
 
-p{
+h1,h2,p{
     margin: 0;
 }
 
 .title-header{
     font-size: 2.2rem;
-    margin: 0;
     padding: 0.5em 0;
     color: #FFFFFF;
     display: inline-block;
@@ -49,7 +48,6 @@ p{
 .genre,
 .add-to-watchlist{
     font-size: 0.75rem;
-    line-height: 1.2;
 }
 
 .movie-plot{
@@ -67,7 +65,9 @@ p{
     }
 }
 
-/* LAYOUT */
+/* ==========
+LAYOUT 
+========== */
 header{
     background-color: #676666;
     background-image: url(../images/movie_posters.jpg);
@@ -90,8 +90,12 @@ header{
     padding: 3em 0;
 }
 
+
+/* ============
+SEARCH FORM
+============*/
 .container-search{
-    margin-top: -20px;
+    margin-top: -1.6em;
 } 
 
 form{
@@ -102,7 +106,7 @@ form{
 .search-btn{
     font-size: 1.125rem;
     padding: 0.5em 0.75em;
-    border: 1px solid gray;
+    border: 1px solid #9c9b9b;
 }
 
 .search-input::placeholder,
@@ -111,19 +115,19 @@ form{
 }
 .search-input{
     background: url(../images/icons8-search-30.png) no-repeat;
-    background-size: 20px;
-    background-position: 15px;
+    background-size: 1.25em;
+    background-position: 1em;
     background-color: #FFFFFF;
     width: 75%;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
     padding-left: 3em;
     border-right: none;
 }
 
 .search-btn:focus,
 .search-input:focus{
-    outline: white;
+    outline: #FFFFFF;
 }
 
 .search-input::placeholder{
@@ -133,8 +137,8 @@ form{
 .search-btn{
     width: 25%;
     font-size: 0.875rem;
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
 }
 
 /* ============
@@ -159,6 +163,7 @@ MOVIE LISTING
     padding: 1.5em 0;
     border-bottom: 1px solid #E5E7EB;
 }
+
 .movie-listing:last-child{
     border: none;
 }
@@ -182,18 +187,7 @@ MOVIE LISTING
 
 .movie-title-rating{
     display: flex;
-    /* padding: 0.75em 0; */
 }
-
-
-.movie-runtime-genre-watchlist{
-    padding-bottom: 0.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 
 .rating{
     display: flex;
@@ -209,8 +203,19 @@ MOVIE LISTING
     margin-right: 0.2em;
 }
 
-.genre {
-    margin: 0 1em;
+.movie-runtime-genre-watchlist{
+    padding-bottom: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.runtime,
+.genre,
+.remove-from-watchlist,
+.add-to-watchlist{
+    padding: 0.5em 0.7em 0.5em 0;
 }
 
 .remove-from-watchlist,
@@ -219,17 +224,8 @@ MOVIE LISTING
     align-items: center;
     background-color: transparent;
     border: none;
-    margin-right: 1em;
     cursor: pointer;
-    transform: scale(1);
-    transition: transform 150ms ease-in-out;
-}
-
-.remove-from-watchlist:hover,
-.remove-from-watchlist:focus,
-.add-to-watchlist:hover,
-.add-to-watchlist:focus{
-    transform: scale(1.03);
+    transition: color 100ms ease-in-out;
 }
 
 .remove-svg,
@@ -248,9 +244,19 @@ MOVIE LISTING
     background-color: transparent;
     padding: 0;
     cursor: pointer;
+    transition: color 100ms ease-in-out;
 }
- 
 
+.read-more:hover:hover,
+.read-more:focus,
+.read-less:hover,
+.read-less:focus,
+.remove-from-watchlist:hover,
+.remove-from-watchlist:focus,
+.add-to-watchlist:hover,
+.add-to-watchlist:focus{
+    color:#505a69;
+} 
 
 /*============
 Messages 
@@ -268,26 +274,6 @@ Messages
     align-self: center;
 }
 
-
-.info-text,
-.in-page-search-link{
-    margin-bottom: 1.125em;
-    display: inline-block;
-    color: #bdbdbd;
-    font-weight: 700;
-    line-height: 1.25;
-    text-align: center;
-}
-
-.info-text{
-    font-size: 1.125rem;
-    letter-spacing: 1px;
-}
-.in-page-search-link{
-    color: #363636;
-    text-decoration: none;
-}
-
 .link-svg{
     display: flex;
     align-self: center;
@@ -299,10 +285,30 @@ Messages
     transform: scale(1.03);
 }
 
-.test{
-    background-color: red;
+.info-text,
+.in-page-search-link{
+    margin-bottom: 1.125em;
+    display: block;
+    color: #bdbdbd;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
 }
 
+.info-text{
+    font-size: 1.125rem;
+    letter-spacing: 1px;
+}
+
+.in-page-search-link{
+    color: #363636;
+    text-decoration: none;
+}
+
+
+/* ============
+MEDIA QUERIES
+============ */
 
 @media (min-width: 550px){
     .container-header{
